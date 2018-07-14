@@ -1,6 +1,8 @@
 @mixin parallax($url) {
   position: relative;
-  ::before {
+  overflow: hidden;
+  transform-style: preserve-3d;
+  &::before {
     content: '';
     display: block;
     position: absolute;
@@ -10,8 +12,8 @@
     top: 0;
     z-index: -1;
     transform-origin: center;
-    min-height: 100%;
-    background-image: url('https://images.unsplash.com/photo-1531114181037-5e61a592cf2a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=23dbfaafedbf9400522ef9c47334f99a&auto=format&fit=crop&w=1350&q=80');
+    min-height: 100vh;
+    background-image: url($url);
     background-repeat: no-repeat;
     background-size: cover;
     transform: translateZ(-1px) scale(2);
