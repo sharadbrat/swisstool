@@ -1,16 +1,21 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { Provider } from 'react-redux';
+
+import { Pages } from '$pages';
+
+import { configureStore } from '$store';
+
 import './App.scss';
-import { ParallaxDemo } from './component/parallax/ParallaxDemo'
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <ParallaxDemo>
-          <h1>Hello world</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum neque nisi voluptatum. Aperiam asperiores consequatur earum fuga itaque modi quibusdam reiciendis repudiandae vero voluptate? Amet earum odit perspiciatis recusandae voluptatum.</p>
-        </ParallaxDemo>
-      </div>
+      <Provider store={configureStore()}>
+          <Router>
+            <Pages/>
+          </Router>
+      </Provider>
     );
   }
 }

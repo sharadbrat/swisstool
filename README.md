@@ -1,7 +1,13 @@
-# visual-components
-This project is made up for easy bootstrapping and fast landing page creation.
+# swisstool
+Demo project for experience gaining in React, Redux, etc.
 
-## Available components
-- Grid-layout
-- List-layout
-- Single and multiple dropdown
+## Planned tools
+- Dashboard
+- Todo-list (obviously)
+- Notes
+
+## Technology stack
+- SASS / SCSS
+- React
+- Redux
+- Webpack
