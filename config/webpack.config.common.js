@@ -8,5 +8,6 @@ module.exports.dirnameAlias = {
   '$pages': path.resolve(root, './src/pages'),
   '$store': path.resolve(root, './src/store'),
   '$utils': path.resolve(root, './src/utils'),
-  '$service': path.resolve(root, './src/service')
+  '$service': path.resolve(root, './src/service'),
+  '$style': path.resolve(root, './src/style')
 };
