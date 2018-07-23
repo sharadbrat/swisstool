@@ -1,2 +1,3 @@
-export { NavbarItem } from './navbar-item';
-export { Navbar } from './navbar';
+export * from './navbar-item';
+export * from './navbar';
+export * from './page-header';

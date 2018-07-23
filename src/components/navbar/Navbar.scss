@@ -1,5 +1,25 @@
-.navigation-bar {
-  &__list {
+@import "../../style/colors";
 
-  }
+.navigation-heading {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 38px;
+  font-weight: 300;
+  letter-spacing: 10px;
+}
+
+.navigation-logo {
+  margin-top: 2rem;
+  max-height: 120px;
+}
+
+.navigation-bar {
+  margin-top: 2rem;
+  flex-grow: 1;
+  background-color: $color-element-1;
+}
+
+.navigation-bar__list {
+  display: flex;
+  flex-direction: column;
 }
