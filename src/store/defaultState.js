@@ -11,8 +11,13 @@ export const defaultDashboardState = {
   todoItems: []
 };
 
+export const defaultGlobalState = {
+  isNavigationActive: false
+};
+
 export const defaultState = {
   notes: defaultNotesState,
   todolist: defaultTodolistState,
-  dashboard: defaultDashboardState
+  dashboard: defaultDashboardState,
+  global: defaultGlobalState
 };
