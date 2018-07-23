@@ -1,5 +1,6 @@
 import { isFunction, isClass, clone } from '../function';
 import { isNumber } from '../number';
+import { isObject } from './isObject';
 
 export function copyDeep(source) {
   source = {source};
@@ -17,7 +18,7 @@ export function copyDeep(source) {
           case isFunction(source[key]):
             target[key] = clone(source[key]);
             break;
-          case Object.isObject(source[key]):
+          case isObject(source[key]):
             doCopyOtherThings(target[key], source[key]);
             break;
           case Array.isArray(source[key]):
