@@ -1,16 +1,27 @@
-import { combineReducers, createStore } from 'redux';
+import { combineReducers, createStore, applyMiddleware, compose } from 'redux';
 import { defaultState } from './defaultState';
 
 import { notesReducer } from './notes';
 import { todolistReducer } from './todolist';
 import { dashboardReducer } from './dashboard';
+import { globalReducer } from './global/globalReducer';
 
-export function configureStore(preloadedState = defaultState) {
+import { connectRouter, routerMiddleware } from 'connected-react-router'
+
+export function configureStore(history) {
   const reducers = combineReducers({
     notes: notesReducer,
     todolist: todolistReducer,
-    dashboard: dashboardReducer
+    dashboard: dashboardReducer,
+    global: globalReducer
   });
 
-  return createStore(reducers, preloadedState);
+  return createStore(
+    connectRouter(history)(reducers),
+    defaultState,
+    compose(
+      applyMiddleware(routerMiddleware(history)),
+      window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+    )
+  );
 }
