@@ -5,6 +5,7 @@
   background-color: transparent;
   transition: background-color ease-in-out 80ms;
   text-align: center;
+  cursor: pointer;
 
   &:hover {
     background-color: rgba(#fff, 0.1);
