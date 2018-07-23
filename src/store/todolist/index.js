@@ -2,7 +2,7 @@ export { todolistReducer } from './todolistReducer';
 
 export { todolistActionTypes } from './todolistActions';
 
-export { TodolistSetTodosAction } from './todolistActions';
-export { TodolistAddTodoAction } from './todolistActions';
-export { TodolistModifyTodoAction } from './todolistActions';
-export { TodolistRemoveTodoAction } from './todolistActions';
+export { todolistSetTodosAction } from './todolistActions';
+export { todolistAddTodoAction } from './todolistActions';
+export { todolistModifyTodoAction } from './todolistActions';
+export { todolistRemoveTodoAction } from './todolistActions';
