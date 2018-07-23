@@ -1,0 +1,41 @@
+@import "../style/index";
+
+.application {
+  min-height: 100vh;
+  background-color: $color-text-main;
+
+  .navigation-wrapper {
+    position: fixed;
+    min-height: 100vh;
+    width: 100vw;
+    transform: translateX(-100%);
+    background-color: $color-element-2;
+    transition: transform ease 600ms;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .application-wrapper {
+    opacity: 1;
+    background-color: $color-background-main;
+    min-height: 100vh;
+    width: 100vw;
+    transform: scale(1);
+    transition: transform ease 700ms, opacity ease 700ms;
+  }
+
+}
+
+.application_nav-active {
+
+  .navigation-wrapper {
+    transform: translateX(0);
+  }
+
+  .application-wrapper {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+}

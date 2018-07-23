@@ -1,5 +1,19 @@
 import React from 'react';
 
+import { CommonPage } from '$pages';
+
 export function Dashboard() {
-  return <h1>Dashboard!</h1>
+  const controls = getDashboardControls();
+
+  return (
+    <CommonPage controls={controls}>
+      <h1>Dashboard!</h1>
+    </CommonPage>
+  );
+}
+
+function getDashboardControls() {
+  return (
+    <span>Some controls</span>
+  );
 }
