@@ -1,0 +1,12 @@
+.navbar-item {
+  min-height: 1.5rem;
+  line-height: 1.5rem;
+  padding: 1rem 2rem;
+  background-color: transparent;
+  transition: background-color ease-in-out 80ms;
+  text-align: center;
+
+  &:hover {
+    background-color: rgba(#fff, 0.1);
+  }
+}

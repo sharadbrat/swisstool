@@ -16,7 +16,7 @@ const mapDispatchToProps = dispatch => {
 };
 
 export function NavbarItemComponent({ url, title, navigate }) {
-  return <a onClick={() => navigate(url)}>{title}</a>;
+  return <a onClick={() => navigate(url)} className="navbar-item">{title}</a>;
 }
 
 const NavbarItem = connect(null, mapDispatchToProps)(NavbarItemComponent);
