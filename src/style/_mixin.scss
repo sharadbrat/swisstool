@@ -1,0 +1,18 @@
+@import "colors";
+
+@mixin backgroundImage($url) {
+  background-image: url($url);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-color: transparent;
+}
+
+@mixin outline-focus() {
+  $color: $color-text-accent;
+  &:focus {
+    outline-color: $color;
+    outline-style: auto;
+    outline-width: 5px;
+  }
+}

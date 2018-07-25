@@ -1,0 +1,16 @@
+@import "../../style/colors";
+@import "../../style/mixin";
+
+.page-header {
+  display: flex;
+  min-height: 2rem;
+  line-height: 2rem;
+  background-color: $color-element-2;
+  padding: 0 2rem;
+  position: relative;
+  color: $color-background-main;
+}
+
+.page-header__content {
+
+}
