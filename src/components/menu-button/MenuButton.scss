@@ -1,0 +1,22 @@
+@import "../../style/colors";
+@import "../../style/mixin";
+
+.back-button {
+  $size: 48px;
+  width: $size;
+  height: $size;
+  border: none;
+  padding: 0;
+  display: block;
+  outline: none;
+  border-radius: 24px;
+
+  @include backgroundImage('/image/menu.svg');
+  background-size: 38px;
+
+  transition: background-color ease-in-out 70ms;
+
+  &:active {
+    background-color: rgba(#fff, 0.3);
+  }
+}
