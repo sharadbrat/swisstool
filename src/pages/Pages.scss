@@ -16,6 +16,15 @@
     flex-direction: column;
     max-width: 500px;
     will-change: transform;
+    max-height: 100vh;
+    overflow: auto;
+    height: 100vh;
+  }
+
+  .navigation-wrapper-inner {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
   }
 
   .application-wrapper {
@@ -39,6 +48,8 @@
   .application-wrapper {
     opacity: 0.4;
     transform: scale(0.8);
+    overflow: hidden;
+    max-height: 100vh;
   }
 
 }

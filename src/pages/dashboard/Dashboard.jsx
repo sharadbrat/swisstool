@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { Construction } from '$components';
 import { CommonPage } from '$pages';
 
 export function Dashboard() {
@@ -7,7 +8,7 @@ export function Dashboard() {
 
   return (
     <CommonPage controls={controls}>
-      <h1>Dashboard!</h1>
+      <Construction/>
     </CommonPage>
   );
 }

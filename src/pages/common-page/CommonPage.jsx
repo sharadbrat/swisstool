@@ -10,7 +10,7 @@ const mapDispatchToProps = dispatch => {
   return {
     toggleNavigation: () => dispatch(globalToggleNavigationAction())
   }
-}
+};
 
 function CommonPageComponent({ children, controls, toggleNavigation }) {
   return (

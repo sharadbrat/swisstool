@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { Construction } from '$components';
 import { CommonPage } from '$pages';
 
 export function Todolist() {
@@ -7,7 +8,7 @@ export function Todolist() {
 
   return (
     <CommonPage controls={controls}>
-      <h1>Todolist!</h1>
+      <Construction/>
     </CommonPage>
   );
 }
