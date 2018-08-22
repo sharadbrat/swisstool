@@ -5,6 +5,7 @@ import { notesReducer } from './notes';
 import { todolistReducer } from './todolist';
 import { dashboardReducer } from './dashboard';
 import { globalReducer } from './global/globalReducer';
+import { pomodoroReducer } from './pomodoro';
 
 import { connectRouter, routerMiddleware } from 'connected-react-router'
 
@@ -13,7 +14,8 @@ export function configureStore(history) {
     notes: notesReducer,
     todolist: todolistReducer,
     dashboard: dashboardReducer,
-    global: globalReducer
+    global: globalReducer,
+    pomodoro: pomodoroReducer
   });
 
   return createStore(
