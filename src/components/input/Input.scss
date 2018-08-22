@@ -1,0 +1,38 @@
+.input__input {
+  display: block;
+  height: 1.5rem;
+  line-height: 1rem;
+  outline: none;
+  border: none;
+  padding: 0 0.5rem;
+  border-bottom: 3px solid black;
+  border-image-source: url('/resource/galaxy.jpg');
+  border-image-slice: 70;
+  border-image-repeat: round;
+  box-sizing: border-box;
+  width: 100%;
+  background-color: transparent;
+  &:focus, &:active {
+    bottom: 1px solid $color-border-accent;
+  }
+
+  &-wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: .5rem;
+  }
+}
+
+.input__label {
+  display: block;
+  position: absolute;
+  transform: translateY(0);
+  transition: transform ease-in-out 200ms, color ease-in-out 200ms;
+  pointer-events: none;
+  color: $color-text-secondary;
+
+  &._focus {
+    transform: translate(-.5rem, -1.25rem) scale(0.8);
+    color: $color-text-primary;
+  }
+}
