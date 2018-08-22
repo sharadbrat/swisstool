@@ -16,3 +16,25 @@
     outline-width: 5px;
   }
 }
+
+@mixin button($color: $color-element-2) {
+  color: #fff;
+
+  padding: 0 12px;
+  min-width: 32px;
+  height: 32px;
+  display: block;
+  box-shadow: none;
+  border: none;
+  appearance: none;
+  border-radius: 4px;
+  background-color: $color;
+  outline: none;
+  transition-duration: 75ms;
+  transition-property: background-color;
+  transition-timing-function: ease-in-out;
+
+  &:active {
+    background-color: darken($color, 10%);
+  }
+}
