@@ -1,2 +1,73 @@
 @import "../../style/colors";
+@import "../../style/mixin";
 
+.todolist-item {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  background-color: #e2e2e9;
+  min-height: 40px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  padding: 0 16px;
+}
+
+.todolist-item__title {
+  font-size: 16px;
+  line-height: 20px;
+  display: inline;
+  height: fit-content;
+  flex-grow: 1;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.todolist-item__title_read {
+
+}
+
+.todolist-item__title_edit {
+  border: 0;
+  padding: 0 8px;
+}
+
+.todolist-item__actions {
+  display: flex;
+  align-items: center;
+}
+
+.todolist-item__action-button {
+  $size: 24px;
+  @include button();
+  height: $size;
+  background-color: transparent;
+  border-radius: $size / 2;
+  min-width: $size;
+  width: $size;
+  padding: 0;
+  margin-left: 8px;
+}
+
+.todolist-item__action-button:active {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.todolist-item__action-button_read-done {
+  background-image: url('/image/done.svg');
+}
+
+.todolist-item__action-button_read-edit {
+  background-image: url('/image/edit.svg');
+}
+
+.todolist-item__action-button_edit-done {
+  background-image: url('/image/done.svg');
+}
+
+.todolist-item__action-button_edit-cancel {
+  background-image: url('/image/clear.svg');
+}
+
+.todolist-item__action-button_edit-delete {
+  background-image: url('/image/trash.svg');
+}

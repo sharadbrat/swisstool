@@ -1,5 +1,7 @@
+import { isString } from '../string';
+
 export function isNumber(n) {
-  if(String.isString(n)) {
+  if(isString(n)) {
     n = n.replace(/,/g, '');
   }
   const parsed = parseFloat(n);

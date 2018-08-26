@@ -2,6 +2,8 @@ import { defaultTodolistState } from '../defaultState';
 import { todolistActionTypes as $$ } from './todolistActions';
 import { actionResolverDecorator } from '../interface';
 
+import { TODOLIST_ITEM_STATUS } from '$utils';
+
 export function todolistReducer(state = defaultTodolistState, action) {
   switch (action.type) {
     case $$.TODOLIST_SET_TODOS_ACTION:
@@ -10,8 +12,8 @@ export function todolistReducer(state = defaultTodolistState, action) {
       return addTodoResolver(state, action.payload);
     case $$.TODOLIST_MODIFY_TODO_ACTION:
       return modifyTodoResolver(state, action.payload);
-    case $$.TODOLIST_REMOVE_TODO_ACTION:
-      return removeTodoResolver(state, action.payload);
+    case $$.TODOLIST_FILTER_CHANGE_ACTION:
+      return filterChangeResolver(state, action.payload);
     default:
       return state;
   }
@@ -25,25 +27,43 @@ function setTodosResolver(state, payload) {
 }
 
 function addTodoResolver(state, payload) {
-  return actionResolverDecorator(state, payload, (s, p) => ({
-    ...s,
-    todoItems: [
-      ...s.todoItems,
-      p.item
-    ]
-  }));
+  return actionResolverDecorator(state, payload, (s, p) => {
+    let index = 0;
+
+    if (s.todoItems && s.todoItems.length) {
+      index = s.todoItems[s.todoItems.length - 1].id + 1;
+    }
+
+    s.todoItems.push({
+      id: index,
+      title: p.title,
+      date: Date.now(),
+      status: TODOLIST_ITEM_STATUS.CURRENT
+    });
+
+    return s;
+  });
 }
 
 function modifyTodoResolver(state, payload) {
   return actionResolverDecorator(state, payload, (s, p) => {
-    state.todoItems[p.item.id] = p.item;
-    return state;
+    const title = p.title === '' ? 'New todo item' : (p.title ? p.title : s.todoItems[p.id].title);
+    s.todoItems[p.id] = {
+      ...s.todoItems[p.id],
+      title: title,
+      status: p.status || state.todoItems[p.id].status
+    };
+    return s;
   });
 }
 
-function removeTodoResolver(state, payload) {
+function filterChangeResolver(state, payload) {
   return actionResolverDecorator(state, payload, (s, p) => {
-    state.todoItems = state.todoItems.filter(el => el.id !== p.item.id);
-    return state;
+    if (s.mode === TODOLIST_ITEM_STATUS.DONE) {
+      s.mode = TODOLIST_ITEM_STATUS.CURRENT;
+    } else {
+      s.mode = TODOLIST_ITEM_STATUS.DONE;
+    }
+    return s;
   });
 }

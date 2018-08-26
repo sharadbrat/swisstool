@@ -68,7 +68,7 @@ class TodolistItem extends React.Component {
 
   getHeading = (mode, title) => {
     if (mode === TODOLIST_ITEM_MODE.EDIT) {
-      return <input ref={this.inputRef} className="todolist-item__title todolist-item__title_edit" type="text" value={title} autoFocus/>;
+      return <input ref={this.inputRef} className="todolist-item__title todolist-item__title_edit" type="text" defaultValue={title} autoFocus/>;
     } else {
       return <h1 className="todolist-item__title todolist-item__title_read">{title}</h1>;
     }
