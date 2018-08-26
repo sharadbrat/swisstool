@@ -1,3 +1,5 @@
+import { TODOLIST_LAYOUT_MODE } from '$utils';
+
 export const defaultNotesState = {
   notes: [
     {
@@ -10,7 +12,8 @@ export const defaultNotesState = {
 };
 
 export const defaultTodolistState = {
-  todoItems: []
+  todoItems: [],
+  mode: TODOLIST_LAYOUT_MODE.CURRENT
 };
 
 export const defaultDashboardState = {
