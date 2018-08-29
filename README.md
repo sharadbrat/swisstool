@@ -19,7 +19,7 @@ Demo project for experience gaining in React, Redux, etc.
 npm install
 ```
 
-2. Serve project on your local mashine
+2. Serve project on your local machine
 ```bash
 npm run start
 ```
