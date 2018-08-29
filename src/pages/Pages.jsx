@@ -67,10 +67,10 @@ class PagesComponent extends React.Component {
         <div ref={this.navigationRef} className="navigation-wrapper">
           <div className="navigation-wrapper-inner">
             <Navbar>
-              <NavbarItem url="/" title="Dashboard"/>
-              <NavbarItem url="/todo-list" title="Todolist"/>
-              <NavbarItem url="/notes" title="Notes"/>
-              <NavbarItem url="/pomodoro" title="Pomodoro Technique"/>
+              <NavbarItem url={`${process.env.PUBLIC_URL}/`} title="Dashboard"/>
+              <NavbarItem url={`${process.env.PUBLIC_URL}/todo-list`} title="Todolist"/>
+              <NavbarItem url={`${process.env.PUBLIC_URL}/notes`} title="Notes"/>
+              <NavbarItem url={`${process.env.PUBLIC_URL}/pomodoro`} title="Pomodoro Technique"/>
             </Navbar>
           </div>
         </div>
