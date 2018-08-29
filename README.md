@@ -5,6 +5,7 @@ Demo project for experience gaining in React, Redux, etc.
 - Dashboard
 - Todo-list (obviously)
 - Notes
+- Pomodoro timer
 
 ## Technology stack
 - SASS / SCSS
