@@ -76,10 +76,10 @@ class PagesComponent extends React.Component {
         </div>
         <div className="application-wrapper">
           <Switch>
-            <Route path="/" exact component={Dashboard}/>
-            <Route path="/todo-list" component={Todolist}/>
-            <Route path="/notes" component={Notes}/>
-            <Route path="/pomodoro" component={Pomodoro}/>
+            <Route path={`${process.env.PUBLIC_URL}/`} exact component={Dashboard}/>
+            <Route path={`${process.env.PUBLIC_URL}/todo-list`} component={Todolist}/>
+            <Route path={`${process.env.PUBLIC_URL}/notes`} component={Notes}/>
+            <Route path={`${process.env.PUBLIC_URL}/pomodoro`} component={Pomodoro}/>
           </Switch>
         </div>
       </main>
