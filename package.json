@@ -8,7 +8,7 @@
     "test": "node scripts/test.js --env=jsdom",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "prepush": "npm run deploy & npm run clean",
+    "prepush": "npm run deploy && npm run clean",
     "clean": "rimraf build"
   },
   "dependencies": {

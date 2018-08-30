@@ -1,5 +1,6 @@
 # swisstool
-Demo project for experience gaining in React, Redux, etc.
+
+Demo project for experience gaining in React ecosystem ([Live demo here][demo]).
 
 ## Planned tools
 - Dashboard
@@ -38,3 +39,4 @@ npm run build
 
 [Freepik]: http://www.freepik.com
 [Flaticon]: https://www.flaticon.com
+[demo]: https://sharadbrat.github.io/swisstool
