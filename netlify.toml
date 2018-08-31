@@ -1,0 +1,18 @@
+[Settings]
+
+ID = "SWISSTOOL"
+
+# Basic build instructions
+[build]
+  # Where to run the command
+  base    = "/"
+  # Path to build folder
+  publish = "build/"
+  # Build command
+  command = "npm i && npm run build"
+
+# Redirects for SPA
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
