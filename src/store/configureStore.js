@@ -9,6 +9,8 @@ import { pomodoroReducer } from './pomodoro';
 
 import { connectRouter, routerMiddleware } from 'connected-react-router'
 
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
 export function configureStore(history) {
   const reducers = combineReducers({
     notes: notesReducer,
@@ -21,9 +23,6 @@ export function configureStore(history) {
   return createStore(
     connectRouter(history)(reducers),
     defaultState,
-    compose(
-      applyMiddleware(routerMiddleware(history)),
-      window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-    )
+    composeEnhancers(applyMiddleware(routerMiddleware(history)))
   );
 }
