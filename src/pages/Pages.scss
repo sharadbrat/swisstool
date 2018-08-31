@@ -35,6 +35,7 @@
     transform: scale(1);
     transition: transform ease 700ms, opacity ease 700ms;
     will-change: opacity, transform;
+    overscroll-behavior-y: contain;
   }
 
 }
