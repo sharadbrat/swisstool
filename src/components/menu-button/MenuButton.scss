@@ -13,6 +13,7 @@
 
   @include backgroundImage('/image/menu.svg');
   background-size: 38px;
+  background-color: transparent;
 
   transition: background-color ease-in-out 70ms;
 

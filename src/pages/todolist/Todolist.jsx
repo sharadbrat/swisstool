@@ -33,14 +33,20 @@ export function TodolistComponent({ items, onItemTitleEdit, onItemRemove, onItem
     />
   ));
 
-  let content = todoItems && todoItems.length ? todoItems : <h1 className="todolist__empty-message">No todo-items for now, go create one!</h1>;
+  let content;
+  if (todoItems && todoItems.length) {
+    content = todoItems;
+  } else {
+    content = <h1 className="todolist__empty-message">No todo-items for now, go create one!</h1>;
+  }
 
   return (
     <CommonPage controls={controls}>
       <section className="todolist">
         <TodolistLayout onFilterChange={() => onFilterChange()}
                         onItemAdd={() => onItemAdd()}
-                        mode={mode}>
+                        mode={mode}
+                        length={todoItems.length}>
           {content}
         </TodolistLayout>
       </section>

@@ -6,7 +6,7 @@
   justify-content: space-between;
   box-sizing: border-box;
   background-color: #e2e2e9;
-  min-height: 40px;
+  min-height: 48px;
   border-radius: 8px;
   margin-bottom: 8px;
   padding: 0 16px;
@@ -18,8 +18,9 @@
   display: inline;
   height: fit-content;
   flex-grow: 1;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 14px;
+  margin-bottom: 14px;
+  width: 0;
 }
 
 .todolist-item__title_read {
@@ -36,8 +37,32 @@
   align-items: center;
 }
 
+.todolist-item__action-button:active {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.todolist-item__action-button_read-done {
+  @include backgroundImage('/image/done.svg');
+}
+
+.todolist-item__action-button_read-edit {
+  @include backgroundImage('/image/edit.svg');
+}
+
+.todolist-item__action-button_edit-done {
+  @include backgroundImage('/image/done.svg');
+}
+
+.todolist-item__action-button_edit-cancel {
+  @include backgroundImage('/image/clear.svg');
+}
+
+.todolist-item__action-button_edit-delete {
+  @include backgroundImage('/image/trash.svg');
+}
+
 .todolist-item__action-button {
-  $size: 24px;
+  $size: 32px;
   @include button();
   height: $size;
   background-color: transparent;
@@ -46,28 +71,5 @@
   width: $size;
   padding: 0;
   margin-left: 8px;
-}
-
-.todolist-item__action-button:active {
-  background-color: rgba(0, 0, 0, 0.3);
-}
-
-.todolist-item__action-button_read-done {
-  background-image: url('/image/done.svg');
-}
-
-.todolist-item__action-button_read-edit {
-  background-image: url('/image/edit.svg');
-}
-
-.todolist-item__action-button_edit-done {
-  background-image: url('/image/done.svg');
-}
-
-.todolist-item__action-button_edit-cancel {
-  background-image: url('/image/clear.svg');
-}
-
-.todolist-item__action-button_edit-delete {
-  background-image: url('/image/trash.svg');
+  background-size: 28px;
 }
