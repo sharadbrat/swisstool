@@ -3,7 +3,7 @@
 $font-color: $color-background-main;
 
 .navigation-heading {
-  margin-top: 2rem;
+  margin-top: 5rem;
   text-align: center;
   font-size: 38px;
   font-weight: 300;
@@ -17,6 +17,7 @@ $font-color: $color-background-main;
   position: relative;
   display: flex;
   justify-content: center;
+  flex-shrink: 0;
 }
 
 .navigation-bar {

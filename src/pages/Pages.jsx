@@ -57,14 +57,19 @@ class PagesComponent extends React.Component {
   onMainClick = (event) => {
     const navElem = this.navigationRef.current;
     if (this.props.isNavigationActive && event.target !==  navElem && !navElem.contains(event.target)) {
-      this.props.setNavigationActive(false);
+      this.closeNavigation();
     }
+  };
+
+  closeNavigation = () => {
+    this.props.setNavigationActive(false);
   };
 
   render() {
     return (
       <main onClick={this.onMainClick} className={this.getMainClass(this.props.isNavigationActive)}>
         <div ref={this.navigationRef} className="navigation-wrapper">
+          <button className="navigation-wrapper__close" onClick={this.closeNavigation}/>
           <div className="navigation-wrapper-inner">
             <Navbar>
               <NavbarItem url={`${process.env.PUBLIC_URL}/`} title="Dashboard"/>
