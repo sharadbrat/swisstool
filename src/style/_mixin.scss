@@ -37,4 +37,8 @@
   &:active {
     background-color: darken($color, 10%);
   }
+
+  &:disabled {
+    background-color: lighten(grayscale($color), 15%);
+  }
 }

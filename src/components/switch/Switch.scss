@@ -1,0 +1,50 @@
+@import "../../style/colors";
+
+$width: 56px;
+$height: 32px;
+$distance: 4px;
+$thumb-size: $height - $distance * 2;
+$transition-time: 300ms;
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: $width;
+  height: $height;
+  flex-shrink: 0;
+}
+
+.switch__checkbox {
+  display:none;
+}
+
+.switch__slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $color-element-2;
+  border-radius: $height;
+}
+
+.switch__slider:before {
+  position: absolute;
+  content: "";
+  height: $thumb-size;
+  width: $thumb-size;
+  left: $distance;
+  bottom: $distance;
+  background-color: #FFFFFF;
+  transition: transform ease $transition-time;
+  border-radius: 50%;
+}
+
+.switch__checkbox:focus + .switch__slider {
+  box-shadow: 0 0 1px $color-element-2;
+}
+
+.switch__checkbox:checked + .switch__slider:before {
+  transform: translateX($width - $distance * 2 - $thumb-size);
+}
