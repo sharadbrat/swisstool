@@ -1,0 +1,35 @@
+@import "../../style/mixin";
+
+.todolist-layout {
+  max-width: 550px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.todolist-layout__actions {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.todolist-layout__content {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  max-width: 550px;
+}
+
+.todolist-layout__filter {
+  @include backgroundImage('/image/filter.svg');
+  @include button();
+  background-position: 12px center;
+  background-size: 28px;
+  width: 118px;
+  text-align: right;
+  font-size: 16px;
+}
+
+.todolist-layout__add {
+  @include backgroundImage('/image/add.svg');
+  @include button();
+}

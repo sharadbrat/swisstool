@@ -1,0 +1,18 @@
+@import '../../style/colors';
+@import '../../style/mixin';
+
+.question-button {
+  @include button();
+  background-color: transparent;
+  font-weight: 600;
+  font-size: 22px;
+  width: 48px;
+  height: 48px;
+  line-height: 48px;
+  text-align: center;
+  border-radius: 24px;
+
+  &:active {
+    background-color: rgba(#fff, 0.3)
+  }
+}

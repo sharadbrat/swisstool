@@ -1,0 +1,18 @@
+@import "../../style/colors";
+@import "../../style/mixin";
+
+.page-header {
+  display: flex;
+  align-items: center;
+  min-height: 64px;
+  line-height: 64px;
+  background-color: $color-element-2;
+  padding: 0 2rem;
+  position: relative;
+  color: $color-background-main;
+}
+
+.page-header__content {
+  margin-left: 2rem;
+  flex-grow: 1;
+}

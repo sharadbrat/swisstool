@@ -1,0 +1,33 @@
+@import "../../style/colors";
+
+$font-color: $color-background-main;
+
+.navigation-heading {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 38px;
+  font-weight: 300;
+  letter-spacing: 10px;
+  color: $font-color;
+}
+
+.navigation-logo {
+  margin-top: 2rem;
+  height: 120px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.navigation-bar {
+  margin-top: 2rem;
+  flex-grow: 1;
+  background-color: $color-element-1;
+  color: $font-color;
+}
+
+.navigation-bar__list {
+  display: flex;
+  flex-direction: column;
+  color: $font-color;
+}
