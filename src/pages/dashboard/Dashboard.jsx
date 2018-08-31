@@ -15,6 +15,6 @@ export function Dashboard() {
 
 function getDashboardControls() {
   return (
-    <span>Some controls</span>
+    <span>Dashboard</span>
   );
 }

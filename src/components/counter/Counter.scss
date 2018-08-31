@@ -10,23 +10,14 @@ $button-color: $color-element-2;
 }
 
 .counter__button {
-  padding: 0;
-  width: 32px;
-  height: 32px;
-  display: block;
-  box-shadow: none;
-  border: none;
-  appearance: none;
-  border-radius: 4px;
   @include backgroundImage('/image/arrow_up.svg');
-  background-color: $button-color;
-  outline: none;
-  transition-duration: 75ms;
-  transition-property: background-color;
-  transition-timing-function: ease-in-out;
-
-  @include button($button-color)
-
+  @include button($button-color);
+  $size: 48px;
+  padding: 0;
+  width: $size;
+  height: $size;
+  border-radius: 8px;
+  background-size: 36px;
 }
 
 .counter__button_increase {
@@ -37,12 +28,8 @@ $button-color: $color-element-2;
   transform: rotate(180deg);
 }
 
-.counter__button_disabled {
-  background-color: rgba($button-color, 0.5);
-}
-
 .counter__number {
   display: block;
-  min-width: 32px;
+  min-width: 48px;
   text-align: center;
 }
