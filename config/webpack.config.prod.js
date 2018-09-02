@@ -323,7 +323,7 @@ module.exports = {
       },
       minify: true,
       staticFileGlobs: [
-        `${publicUrl}/image/**.*`
+        `${paths.appPublic}/image/**.*`
       ],
       mergeStaticsConfig: true,
       // For unknown URLs, fallback to the index page
