@@ -322,9 +322,10 @@ module.exports = {
         console.log(message);
       },
       minify: true,
-      // staticFileGlobs: [
-      //   `${publicUrl}/image/**.*`
-      // ],
+      staticFileGlobs: [
+        `${publicUrl}/image/**.*`
+      ],
+      mergeStaticsConfig: true,
       // For unknown URLs, fallback to the index page
       navigateFallback: publicUrl + '/index.html',
       // Ignores URLs starting from /__ (useful for Firebase):
