@@ -14,7 +14,7 @@ const paths = require('./paths');
 const getClientEnvironment = require('./env');
 
 const common = require('./webpack.config.common');
-
+console.log(paths.appPublic)
 // Webpack uses `publicPath` to determine where the app is being served from.
 // It requires a trailing slash, or the file assets will get an incorrect path.
 const publicPath = paths.servedPath;
@@ -322,6 +322,9 @@ module.exports = {
         console.log(message);
       },
       minify: true,
+      staticFileGlobs: [
+        `${paths.appPublic}/image/**.*`
+      ],
       // For unknown URLs, fallback to the index page
       navigateFallback: publicUrl + '/index.html',
       // Ignores URLs starting from /__ (useful for Firebase):
