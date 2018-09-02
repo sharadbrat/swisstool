@@ -323,7 +323,7 @@ module.exports = {
       },
       minify: true,
       staticFileGlobs: [
-        `${paths.appPublic}/image/**.*`
+        `${publicUrl}/image/**.*`
       ],
       // For unknown URLs, fallback to the index page
       navigateFallback: publicUrl + '/index.html',

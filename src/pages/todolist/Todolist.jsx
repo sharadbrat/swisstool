@@ -56,7 +56,7 @@ export function TodolistComponent({ items, onItemTitleEdit, onItemRemove, onItem
 
 function getTodolistControls() {
   return (
-    <span className="todolist__heading">Todo List</span>
+    <h1 className="todolist__heading">Todo List</h1>
   );
 }
 

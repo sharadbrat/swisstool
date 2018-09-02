@@ -57,7 +57,7 @@ $transition-time: 200ms;
 
 .dialog__window__close-button {
   @include button(#fff);
-  @include backgroundImage('/image/close.svg');
+  @include backgroundImage('/image/close_black.svg');
   border-radius: 16px;
   height: 32px;
   width: 32px;
