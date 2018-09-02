@@ -18,10 +18,11 @@ gulp.task('sw-images-paths-change', () => {
       const fileMapString = content.slice(leftBound, rightBound);
       const fileMap = eval(fileMapString);
 
-      const imageMap = fileMap.filter(el => el[0].indexOf('image') !== -1);
-      imageMap.forEach(el => el[0] = el[0].slice(el[0].indexOf('/image')))
+      fileMap
+        .filter(el => el[0].indexOf('image') !== -1)
+        .forEach(el => el[0] = el[0].slice(el[0].indexOf('/image')))
 
-      return spliceSlice(content, leftBound, rightBound - leftBound, JSON.stringify(imageMap));
+      return spliceSlice(content, leftBound, rightBound - leftBound, JSON.stringify(fileMap));
     }))
     .pipe(gulp.dest('build'));
 });
