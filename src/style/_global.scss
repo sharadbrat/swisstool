@@ -1,3 +1,4 @@
 @import "./mixin";
 
 @include overscrollFix();
+@include textSelectionFix();
