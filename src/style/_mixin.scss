@@ -69,7 +69,7 @@
 }
 
 @mixin textSelectionFix() {
-  * {
+  *:not(input) {
     user-select: none;
   }
 }
