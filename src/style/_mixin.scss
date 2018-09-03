@@ -49,3 +49,27 @@
     }
   }
 }
+
+// fixes for mobile and PWA
+
+@mixin overscrollFix() {
+  * {
+    overscroll-behavior-y: none;
+  }
+
+  html {
+    overflow: hidden;
+    height: 100%;
+  }
+
+  body {
+    height: 100%;
+    overflow: auto;
+  }
+}
+
+@mixin textSelectionFix() {
+  * {
+    user-select: none;
+  }
+}

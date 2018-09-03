@@ -1,7 +1,9 @@
 @import "mixin";
-@import "theme";
+@import "colors";
+
+@import "fonts";
+@import "global";
 @import "reset";
 @import "normalize";
-@import "global";
-@import "colors";
-@import "fonts";
+
+@import "theme";
