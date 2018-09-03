@@ -1,9 +1,3 @@
-html {
-  overflow: hidden;
-  height: 100%;
-}
+@import "./mixin";
 
-body {
-  height: 100%;
-  overflow: auto;
-}
+@include overscrollFix();
