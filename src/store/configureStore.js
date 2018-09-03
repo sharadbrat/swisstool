@@ -29,8 +29,5 @@ export function configureStore(history) {
     composeEnhancers(applyMiddleware(routerMiddleware(history)))
   );
 
-  // Subscribe to store changes and save all the changes in localStorage
-  store.subscribe(() => StorageService.saveState(store.getState()));
-
   return store;
 }
