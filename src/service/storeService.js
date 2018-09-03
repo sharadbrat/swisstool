@@ -1,5 +1,8 @@
 import { createBrowserHistory } from 'history';
+
 import { defaultState as defState, configureStore } from '$store';
+
+import { SetupService } from './setupService';
 
 export const StoreService = (() => {
   let store;
@@ -10,6 +13,7 @@ export const StoreService = (() => {
     obtainStore: () => {
       if (!store) {
         store = configureStore(history);
+        SetupService.setup(store);
       }
       return store;
     },
