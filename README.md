@@ -39,4 +39,4 @@ npm run build
 
 [Freepik]: http://www.freepik.com
 [Flaticon]: https://www.flaticon.com
-[demo]: https://sharadbrat.github.io/swisstool
+[demo]: https://swisstool.netlify.com
