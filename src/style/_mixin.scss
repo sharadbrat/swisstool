@@ -50,6 +50,15 @@
   }
 }
 
+@mixin button-large($color) {
+  @include button($color);
+  min-width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  font-size: 20px;
+  padding: 0 24px;
+}
+
 // fixes for mobile and PWA
 
 @mixin overscrollFix() {
@@ -58,18 +67,19 @@
   }
 
   html {
-    overflow: hidden;
     height: 100%;
   }
 
-  body {
-    height: 100%;
-    overflow: auto;
-  }
 }
 
 @mixin textSelectionFix() {
   *:not(input) {
     user-select: none;
+  }
+}
+
+@mixin hidden() {
+  *[hidden] {
+    display: none;
   }
 }

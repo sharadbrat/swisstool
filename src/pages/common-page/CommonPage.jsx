@@ -14,11 +14,11 @@ const mapDispatchToProps = dispatch => {
 
 function CommonPageComponent({ children, controls, toggleNavigation }) {
   return (
-    <section>
+    <section className="common-page">
       <PageHeader backButtonClick={toggleNavigation}>
         {controls}
       </PageHeader>
-      <main>
+      <main className="common-page__main">
         {children}
       </main>
     </section>

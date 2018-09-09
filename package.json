@@ -6,7 +6,6 @@
     "build": "node scripts/build.js && gulp postbuild",
     "test": "node scripts/test.js --env=jsdom",
     "prepush": "npm run build && npm run clean",
-    "precommit": "npm run build && npm run clean",
     "clean": "rimraf build"
   },
   "dependencies": {
@@ -20,6 +19,7 @@
     "react-redux": "^5.0.7",
     "react-router": "^4.3.1",
     "redux": "^4.0.0",
+    "showdown": "^1.8.6",
     "whatwg-fetch": "2.0.3"
   },
   "devDependencies": {
