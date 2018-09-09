@@ -27,9 +27,8 @@ export const ProgressiveWebAppService = (() => {
           if (choiceResult.outcome === 'accepted') {
             setInstallButtonActive(false);
           } else {
-            console.log('User dismissed the A2HS prompt');
+            setInstallButtonActive(true);
           }
-          installPrompt = null;
         });
     }
   };
