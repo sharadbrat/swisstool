@@ -32,7 +32,7 @@ function PomodoroComponent({time, pomodoros, startTimer, isActive, setPomodoros,
   function getControls() {
     return (
       <div className="pomodoro__header">
-        <div className="pomodoro__heading">Pomodoro Technique</div>
+        <h1 className="pomodoro__heading">Pomodoro Technique</h1>
         <QuestionButton title="What is pomodoro technique?">
           <section className="pomodoro__explanation">
             <p className="pomodoro__explanation__item">Pomodoro technique is a time management system, which teaches you to work with time, instead of struggling against it.</p>
@@ -75,7 +75,7 @@ function PomodoroComponent({time, pomodoros, startTimer, isActive, setPomodoros,
   return (
     <CommonPage controls={getControls()}>
       <section className="pomodoro">
-        <PomodoroTimer time={time} pomodoros={pomodoros} isActive={isActive}/>
+        <PomodoroTimer time={time} isActive={isActive}/>
         <div className={getActionsClass()}>
           <span className="pomodoro__description">How many pomodoros do you take?</span>
           <div className="pomodoro__counter">
