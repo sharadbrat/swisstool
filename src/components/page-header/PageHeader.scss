@@ -1,15 +1,25 @@
 @import "../../style/colors";
 @import "../../style/mixin";
 
+$header-background: $color-element-2;
+
 .page-header {
+  display: block;
+  background-color: $header-background;
+}
+
+.page-header__container {
   display: flex;
   align-items: center;
   min-height: 64px;
-  line-height: 64px;
-  background-color: $color-element-2;
+  line-height: 1.5;
+  background-color: $header-background;
   padding: 0 2rem;
   position: relative;
   color: $color-background-main;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .page-header__content {
