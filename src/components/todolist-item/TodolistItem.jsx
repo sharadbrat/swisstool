@@ -43,10 +43,10 @@ class TodolistItem extends React.Component {
     this.props.onItemDone()
   };
 
-  getReadActions = () => (
+  getReadActions = (editable) => (
     <div className="todolist-item__actions">
-      <button className="todolist-item__action-button todolist-item__action-button_read-done" onClick={this.doneRead}/>
-      <button className="todolist-item__action-button todolist-item__action-button_read-edit" onClick={this.edit}/>
+      <button hidden={!editable} className="todolist-item__action-button todolist-item__action-button_read-done" onClick={this.doneRead}/>
+      <button hidden={!editable} className="todolist-item__action-button todolist-item__action-button_read-edit" onClick={this.edit}/>
     </div>
   );
 
@@ -59,10 +59,10 @@ class TodolistItem extends React.Component {
   );
 
   getActions = (mode) => {
-    if (mode === TODOLIST_ITEM_MODE.EDIT) {
+    if (mode === TODOLIST_ITEM_MODE.EDIT && this.props.editable) {
       return this.getEditActions();
     } else {
-      return this.getReadActions();
+      return this.getReadActions(this.props.editable);
     }
   };
 

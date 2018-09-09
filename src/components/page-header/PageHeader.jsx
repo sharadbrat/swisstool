@@ -6,11 +6,13 @@ import './PageHeader.scss';
 
 export function PageHeader({ backButtonClick, children }) {
   return (
-    <header className="page-header">
-      <MenuButton onClick={backButtonClick}/>
-      <div className="page-header__content">
-        {children}
-      </div>
-    </header>
+    <div className="page-header">
+      <header className="page-header__container">
+        <MenuButton onClick={backButtonClick}/>
+        <div className="page-header__content">
+          {children}
+        </div>
+      </header>
+    </div>
   );
 }

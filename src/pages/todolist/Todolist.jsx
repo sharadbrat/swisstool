@@ -30,6 +30,7 @@ export function TodolistComponent({ items, onItemTitleEdit, onItemRemove, onItem
                   onTitleEdit={(title) => onItemTitleEdit(el.id, title)}
                   onRemove={() => onItemRemove(el.id)}
                   onItemDone={() => onItemDone(el.id)}
+                  editable={true}
     />
   ));
 
@@ -46,6 +47,7 @@ export function TodolistComponent({ items, onItemTitleEdit, onItemRemove, onItem
         <TodolistLayout onFilterChange={() => onFilterChange()}
                         onItemAdd={() => onItemAdd()}
                         mode={mode}
+                        actionsEnabled={true}
                         length={todoItems.length}>
           {content}
         </TodolistLayout>
