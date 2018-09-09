@@ -22,7 +22,8 @@ export const defaultDashboardState = {
 };
 
 export const defaultGlobalState = {
-  isNavigationActive: false
+  isNavigationActive: false,
+  isInstallButtonShown: false
 };
 
 export const defaultPomodoroState = {
