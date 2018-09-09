@@ -5,13 +5,15 @@ import { connect } from 'react-redux';
 import { Dashboard, Notes, Todolist, Pomodoro } from '$pages';
 import { NavbarItem, Navbar } from '$components';
 import { globalToggleNavigationAction } from '$store';
+import { ProgressiveWebAppService } from '$service';
 
 import './Pages.scss';
 
 const mapStateToProps = state => {
   return {
     isNavigationActive: state.global.isNavigationActive,
-    router: state.router
+    router: state.router,
+    isInstallButtonActive: state.global.isInstallButtonShown
   };
 };
 
@@ -20,31 +22,6 @@ const mapDispatchToProps = dispatch => {
     setNavigationActive: (active) => dispatch(globalToggleNavigationAction({ isNavigationActive: active }))
   };
 };
-
-// function PagesComponent({ isNavigationActive, setNavigationActive }) {
-//   return (
-//     <main className={getMainClass(isNavigationActive)}>
-//       <div className="navigation-wrapper">
-//         <div className="navigation-wrapper-inner">
-//           <Navbar>
-//             <NavbarItem url="/" title="Dashboard"/>
-//             <NavbarItem url="/todo-list" title="Todolist"/>
-//             <NavbarItem url="/notes" title="Notes"/>
-//             <NavbarItem url="/pomodoro" title="Pomodoro Technique"/>
-//           </Navbar>
-//         </div>
-//       </div>
-//       <div className="application-wrapper">
-//         <Switch>
-//           <Route path="/" exact component={Dashboard}/>
-//           <Route path="/todo-list" component={Todolist}/>
-//           <Route path="/notes" component={Notes}/>
-//           <Route path="/pomodoro" component={Pomodoro}/>
-//         </Switch>
-//       </div>
-//     </main>
-//   );
-// }
 
 class PagesComponent extends React.Component {
 
@@ -65,6 +42,10 @@ class PagesComponent extends React.Component {
     this.props.setNavigationActive(false);
   };
 
+  onInstall = () => {
+    ProgressiveWebAppService.showDefferedPrompt();
+  };
+
   render() {
     return (
       <main onClick={this.onMainClick} className={this.getMainClass(this.props.isNavigationActive)}>
@@ -77,6 +58,7 @@ class PagesComponent extends React.Component {
               <NavbarItem url={`${process.env.PUBLIC_URL}/notes`} title="Notes"/>
               <NavbarItem url={`${process.env.PUBLIC_URL}/pomodoro`} title="Pomodoro Technique"/>
             </Navbar>
+            <button className="navigation-wrapper__install" onClick={this.onInstall} hidden={!this.props.isInstallButtonActive}>Add to home</button>
           </div>
         </div>
         <div className="application-wrapper">
