@@ -14,3 +14,5 @@ export * from './construction';
 export * from './todolist-item';
 export * from './todolist-layout';
 export * from './switch';
+export * from './notes-layout';
+

@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 import { CommonPage } from '$pages';
 import { notesAddNoteAction } from '$store';
-import { Note, Construction } from '$components';
+import { Note, QuestionButton, NotesLayout, Construction } from '$components';
 
 import './Notes.scss';
 
@@ -20,25 +20,38 @@ const mapDispatchToProps = dispatch => {
 };
 
 function NotesComponent({ notes, addNote }) {
-  const controls = getNotesControls();
+
+  function getControls() {
+    return (
+      <div className="notes__header">
+        <div className="notes__heading">Notes</div>
+        <QuestionButton title="What is this page for?">
+          <section className="notes__explanation">
+            <p className="notes__explanation-item">Here you can add notes with special information in order to keep things in mind.</p>
+            <p className="notes__explanation-item">Notes support Markdown syntax (doesn't support images and links):</p>
+            <ul className="notes__explanation-list">
+              <li className="notes__explanation-list-item">To create heading use "#" symbols before heading text (you can use up to 6 symbols, the more symbols are used, the smaller font size is used for heading)</li>
+              <li className="notes__explanation-list-item">To create unordered list use "*" symbol before list-item text</li>
+              <li className="notes__explanation-list-item">To create ordered list use "1." syntax before list-item text</li>
+            </ul>
+            <a className="notes__explanation-link" rel="noopener noreferrer" target="_blank" href="https://en.wikipedia.org/wiki/Markdown">Read more about Markdown syntax</a>
+          </section>
+        </QuestionButton>
+      </div>
+    )
+  }
 
   const notesComponents = notes.map(note =>
-    <Note title={note.title} content={note.content}/>
+    <Note key={note.id} note={note}/>
   );
 
   return (
-    <CommonPage controls={controls}>
-      {/*<div className="notes">*/}
+    <CommonPage controls={getControls()}>
+      {/*<NotesLayout>*/}
         {/*{notesComponents}*/}
-      {/*</div>*/}
+      {/*</NotesLayout>*/}
       <Construction/>
     </CommonPage>
-  );
-}
-
-function getNotesControls() {
-  return (
-    <div className="notes-controls">Notes</div>
   );
 }
 
