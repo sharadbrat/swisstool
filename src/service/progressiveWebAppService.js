@@ -11,25 +11,23 @@ export const ProgressiveWebAppService = (() => {
 
   return {
     setupBeforeInstallDefferedPrompt: () => {
-      window.addEventListener('beforeinstallprompt', (e) => {
-        // Prevent Chrome 67 and earlier from automatically showing the prompt
-        e.preventDefault();
-        // Stash the event so it can be triggered later.
-        installPrompt = e;
-        // Set install button active
+      window.addEventListener('beforeinstallprompt', event => {
+        installPrompt = event;
         setInstallButtonActive(true);
       });
     },
     showDefferedPrompt: () => {
-      installPrompt.prompt();
-      installPrompt.userChoice
-        .then((choiceResult) => {
-          if (choiceResult.outcome === 'accepted') {
-            setInstallButtonActive(false);
-          } else {
-            setInstallButtonActive(true);
-          }
-        });
+      if (installPrompt) {
+        installPrompt.prompt();
+        installPrompt.userChoice
+          .then((choiceResult) => {
+            if (choiceResult.outcome === 'accepted') {
+              setInstallButtonActive(false);
+            } else {
+              setInstallButtonActive(true);
+            }
+          });
+      }
     }
   };
 })();
