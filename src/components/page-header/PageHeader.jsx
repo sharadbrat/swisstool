@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { MenuButton } from '$components';
+import { MenuButton } from '../../components';
 
 import './PageHeader.scss';
 

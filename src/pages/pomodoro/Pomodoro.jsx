@@ -1,10 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import { PomodoroTimer, Counter, QuestionButton } from '$components';
-import { CommonPage } from '$pages';
-import { PomodoroService } from '$service';
-import { pomodoroSetPomodorosAction } from '$store';
+import { PomodoroTimer, Counter, QuestionButton } from '../../components';
+import { CommonPage } from '../../pages';
+import { PomodoroService } from '../../service';
+import { pomodoroSetPomodorosAction } from '../../store';
 
 import './Pomodoro.scss';
 

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { TODOLIST_ITEM_STATUS } from '$utils';
+import { TODOLIST_ITEM_STATUS } from '../../utils';
 
 import './TodolistLayout.scss';
 

@@ -2,7 +2,7 @@ import React from 'react';
 import { push } from 'connected-react-router';
 import { connect } from 'react-redux';
 
-import { globalToggleNavigationAction } from '$store';
+import { globalToggleNavigationAction } from '../../store';
 
 import './NavbarItem.scss';
 

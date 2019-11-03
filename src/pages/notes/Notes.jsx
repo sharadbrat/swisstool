@@ -1,9 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import { CommonPage } from '$pages';
-import { notesAddNoteAction } from '$store';
-import { Note, QuestionButton, NotesLayout, Construction } from '$components';
+import { CommonPage } from '../../pages';
+import { notesAddNoteAction } from '../../store';
+import { Note, QuestionButton, Construction } from '../../components';
 
 import './Notes.scss';
 

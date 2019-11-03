@@ -1,5 +1,5 @@
-import { StoreService } from '$service';
-import { globalSetInstallPromptActiveAction } from '$store';
+import { StoreService } from '../service';
+import { globalSetInstallPromptActiveAction } from '../store';
 
 export const ProgressiveWebAppService = (() => {
   let installPrompt;

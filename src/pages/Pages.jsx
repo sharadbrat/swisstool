@@ -2,10 +2,10 @@ import React from 'react';
 import { Route, Switch } from 'react-router';
 import { connect } from 'react-redux';
 
-import { Dashboard, Notes, Todolist, Pomodoro } from '$pages';
-import { NavbarItem, Navbar } from '$components';
-import { globalToggleNavigationAction } from '$store';
-import { ProgressiveWebAppService } from '$service';
+import { Dashboard, Notes, Todolist, Pomodoro } from '../pages';
+import { NavbarItem, Navbar } from '../components';
+import { globalToggleNavigationAction } from '../store';
+import { ProgressiveWebAppService } from '../service';
 
 import './Pages.scss';
 

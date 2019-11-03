@@ -5,7 +5,6 @@ Demo project for experience gaining in React ecosystem ([Live demo here][demo]).
 ## Planned tools
 - Dashboard
 - Todo-list (obviously)
-- Notes
 - Pomodoro timer
 
 ## Technology stack

@@ -1,8 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import { PageHeader } from '$components';
-import { globalToggleNavigationAction } from '$store';
+import { PageHeader } from '../../components';
+import { globalToggleNavigationAction } from '../../store';
 
 import './CommonPage.scss';
 

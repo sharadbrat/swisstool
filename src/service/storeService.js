@@ -1,6 +1,6 @@
 import { createBrowserHistory } from 'history';
 
-import { defaultState as defState, configureStore } from '$store';
+import { defaultState as defState, configureStore } from '../store';
 
 import { SetupService } from './setupService';
 

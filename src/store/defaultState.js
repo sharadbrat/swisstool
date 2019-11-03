@@ -1,4 +1,4 @@
-import { TODOLIST_ITEM_STATUS } from '$utils';
+import { TODOLIST_ITEM_STATUS } from '../utils';
 
 export const defaultNotesState = {
   notes: [

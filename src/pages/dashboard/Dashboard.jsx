@@ -2,9 +2,9 @@ import React from 'react';
 import { push } from "connected-react-router";
 import { connect } from 'react-redux';
 
-import { TodolistLayout, TodolistItem, PomodoroTimer, QuestionButton } from '$components';
-import { CommonPage } from '$pages';
-import { TODOLIST_ITEM_STATUS } from '$utils';
+import { TodolistLayout, TodolistItem, PomodoroTimer, QuestionButton } from '../../components';
+import { CommonPage } from '../../pages';
+import { TODOLIST_ITEM_STATUS } from '../../utils';
 
 import './Dashboard.scss';
 

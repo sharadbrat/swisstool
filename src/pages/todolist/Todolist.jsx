@@ -1,10 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import { TodolistLayout, TodolistItem } from '$components';
-import { CommonPage } from '$pages';
-import { todolistAddTodoAction, todolistModifyTodoAction, todolistFilterChangeAction } from '$store';
-import { TODOLIST_ITEM_STATUS } from '$utils';
+import { TodolistLayout, TodolistItem } from '../../components';
+import { CommonPage } from '../../pages';
+import { todolistAddTodoAction, todolistModifyTodoAction, todolistFilterChangeAction } from '../../store';
+import { TODOLIST_ITEM_STATUS } from '../../utils';
 
 import './Todolist.scss';
 

@@ -1,5 +1,5 @@
-import { StoreService } from '$service';
-import { pomodoroSetTimeAction, pomodoroSetPomodorosAction, pomodoroSetTimerActive } from '$store';
+import { StoreService } from '../service';
+import { pomodoroSetTimeAction, pomodoroSetPomodorosAction, pomodoroSetTimerActive } from '../store';
 
 export const POMODORO_TIME = 1000 * 60 * 25;
 

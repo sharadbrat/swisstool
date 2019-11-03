@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { POMODORO_TIME } from '$service';
+import { POMODORO_TIME } from '../../service';
 
 import './PomodoroTimer.scss';
 

@@ -2,7 +2,7 @@ import { defaultTodolistState } from '../defaultState';
 import { todolistActionTypes as $$ } from './todolistActions';
 import { actionResolverDecorator } from '../interface';
 
-import { TODOLIST_ITEM_STATUS } from '$utils';
+import { TODOLIST_ITEM_STATUS } from '../../utils';
 
 export function todolistReducer(state = defaultTodolistState, action) {
   switch (action.type) {

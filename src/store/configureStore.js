@@ -1,7 +1,7 @@
 import { combineReducers, createStore, applyMiddleware, compose } from 'redux';
 import { connectRouter, routerMiddleware } from 'connected-react-router'
 
-import { StorageService } from '$service';
+import { StorageService } from '../service';
 
 import { defaultState } from './defaultState';
 import { notesReducer } from './notes';
