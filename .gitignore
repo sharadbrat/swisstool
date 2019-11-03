@@ -3,6 +3,7 @@
 # compiled output
 /dist
 /tmp
+/build
 
 # dependencies
 /node_modules
@@ -43,5 +44,3 @@ Thumbs.db
 
 *sublime*
 gitignored/*
-
-package-lock.json

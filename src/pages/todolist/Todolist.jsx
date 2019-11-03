@@ -32,7 +32,7 @@ export function TodolistComponent({ items, onItemTitleEdit, onItemRemove, onItem
                   onItemDone={() => onItemDone(el.id)}
                   editable={true}
     />
-  ));
+  )).sort((a, b) => a.date > b.date ? 1 : -1);
 
   let content;
   if (todoItems && todoItems.length) {
@@ -62,6 +62,6 @@ function getTodolistControls() {
   );
 }
 
-const Todolist = connect(mapStateToProps, mapDispatchToProps)(TodolistComponent)
+const Todolist = connect(mapStateToProps, mapDispatchToProps)(TodolistComponent);
 
 export { Todolist };
