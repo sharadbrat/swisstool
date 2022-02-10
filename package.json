@@ -40,6 +40,6 @@
     "gulp": "^4.0.2",
     "gulp-modify-file": "^1.0.1",
     "husky": "^3.0.9",
-    "node-sass": "^4.13.0"
+    "node-sass": "^7.0.0"
   }
 }
